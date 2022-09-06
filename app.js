@@ -11,3 +11,15 @@ for (let i = 0; i < 256; i ++) {
     gridDiv.setAttribute('class', 'gridDiv');
     containerDiv.appendChild(gridDiv);
 }
+
+//Create an event listener for hover when entering div
+const boxesInGrid = document.querySelectorAll('.gridDiv');
+
+for (let i = 0; i < boxesInGrid.length; i++) {
+    boxesInGrid[i].addEventListener('mouseenter', changeColor);
+}
+
+//Define function for changing colors
+function changeColor() {
+    this.style['background-color'] = '#000000';
+}
