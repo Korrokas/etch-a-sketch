@@ -21,5 +21,16 @@ for (let i = 0; i < boxesInGrid.length; i++) {
 
 //Define function for changing colors
 function changeColor() {
-    this.style['background-color'] = '#000000';
+    const colorValues = randomColor();
+    this.style['background-color'] = `rgb(${colorValues[0]}, ${colorValues[1]}, ${colorValues[2]})`;
 }
+
+function randomColor() {
+    const rgbA = Math.floor(Math.random() * 256) + 1;
+    const rgbB = Math.floor(Math.random() * 256) + 1;
+    const rgbC = Math.floor(Math.random() * 256) + 1;
+    const threeRandomColors = [rgbA, rgbB, rgbC];
+    return threeRandomColors;
+}
+
+//Button that prompts user for # of squares maximum 100, generate in same total space
