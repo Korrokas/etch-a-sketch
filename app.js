@@ -60,8 +60,8 @@ function newGrid() {
     if (numberOfSquares === null) {
         return;
     }
-    else if (numberOfSquares > 100 || numberOfSquares < 1) {
-        alert("invalid number, please resubmit: ");
+    else if (numberOfSquares > 100 || numberOfSquares < 1 || isNaN(numberOfSquares)) {
+        alert("Invalid selection, please resubmit: ");
         newGrid();
     }
     else {
